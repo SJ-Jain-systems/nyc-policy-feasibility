@@ -4,7 +4,7 @@ Testing random nlp features using this template of political policies. Messing a
 
 ## Test
 
-![Works better than expected although is only able to interpret things in 4ths/ check in later?](<C:\Users\shrey\OneDrive\Desktop\Personal Projects\nyc-policy-feasibility\Screenshot 2025-12-24 180950.png>)
+refer to screenshot!
 
 
 
