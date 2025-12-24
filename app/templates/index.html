@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Policy Feasibility Analyzer</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>NYC Policy Feasibility Analyzer</h1>
+      <p class="sub">Ingest a platform page → extract core promises → score feasibility + explain why.</p>
+      <p class="loaded">Frontend loaded ✅</p>
+    </header>
+
+    <section class="card">
+      <h2>1) Add a source URL</h2>
+      <div class="row">
+        <input id="url" placeholder="Paste a URL (platform/policy page)" />
+        <button id="btnIngest">Ingest</button>
+      </div>
+      <pre id="ingestStatus">{}</pre>
+    </section>
+
+    <section class="card">
+      <h2>2) Extract policies</h2>
+      <div class="row">
+        <button id="btnExtract">Run NLP on latest source</button>
+        <button id="btnLoad">Load scorecard</button>
+      </div>
+      <pre id="extractStatus">{}</pre>
+    </section>
+
+    <section class="card">
+      <h2>3) Scorecard</h2>
+
+      <div class="sectionTitle">
+        <h3 id="coreTitle">Core platform (Top 5)</h3>
+        <p class="hint">These are the 5 most “platform-like” commitments extracted from the platform page.</p>
+      </div>
+      <ul id="corePolicies"></ul>
+
+      <div class="sectionTitle" style="margin-top:18px;">
+        <h3>Other extracted commitments</h3>
+        <p class="hint">Everything else detected by the promise extractor (may include noise).</p>
+      </div>
+      <ul id="policies"></ul>
+    </section>
+
+    <footer>
+      <p class="foot">Feasibility is heuristic v1. “Why this score” explains the rule(s) used.</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
